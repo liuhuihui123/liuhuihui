@@ -110,11 +110,11 @@ if bai == ge:
 else:
     print("{} is not a pailndrome".format(num))
 '''
-#12
+'''#12
 a,b,c = eval(raw_input("shu  ru san jiao xing de san ge bian:"))
 zc = a+b+c
 if (a+b>c):
     print("The perimeter is {}".format(zc))
 else:
     print("shu ru fei fa")
-
+'''
