@@ -11,8 +11,17 @@ while (num!=0):
 avg = (zh + f)/2
 print(zh,f,avg)
 '''
-'''
-#2
+'''#2
+rate_init=0.05
+res = 10000
+for i in range(10):
+    res = res*(1+rate_init)
+print(res)
+count = res
+for i in range(1,4):
+    res = res*(1+rate_init)
+    count +=res
+print(count)
 '''
 '''#3
 num=float(raw_input("Enter an integer,the input ends if it is 0:"))
@@ -46,6 +55,19 @@ n=1
 while n**3<12000:
     n +=1
 print(n)
+-------------------------------
+n=0
+count = True
+while 1:
+    n = n+1
+    if n**3>12000:
+        if count:
+            print('n**3',n-1)
+            count = False
+    if n**2>=12000:
+        print(n*n)
+        print('n**2',n)
+        break
 '''
 '''
 #8
@@ -57,13 +79,14 @@ while a<97:
     n = n + a/b
 print(n)
 '''
-#9
+'''#9
 num = eval(input(">>"))
 sum_ = 0
 for i in range(1,num+1):
     sum_ +=pow((-1),(i+1))/(2 * i - 1)
 pi = 4 * sum_
 print(pi)
+'''
 '''#10(bu wan zheng)
 for i in range(1,10000):
     s = 0
@@ -73,7 +96,7 @@ for i in range(1,10000):
         if i ==s:
             print(i)
             break
-        '''
+'''
 '''#11
 n=0
 for i in range(1,8):
