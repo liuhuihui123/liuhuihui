@@ -59,14 +59,14 @@ def Year(year):
 for i in range(2010,2021):
     Year(i)
 '''
-'''#7
+#7
 x1,y1 = (eval(raw_input('shu ru x1 and y1 for point1:')))
 x2,y2 = (eval(raw_input('shu ru x2 and y2 for point2:')))
 def distance(x1,y1,x2,y2):
-    sum = ((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2)**0.5
+    sum = ((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2))**0.5
     print(sum)
 distance(x1,y1,x2,y2)
-'''
+
 '''#9
 import time
 t = time.time()
