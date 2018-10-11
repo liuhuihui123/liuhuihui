@@ -89,8 +89,24 @@ F1.func()
 F2 = Fan(2,False,5,'blue')
 F2.speed()
 F2.func()
-'''     
-
+'''
+'''
+#4
+class Fan:
+    def __init__(self,speed,radius,color,on):
+        self.__speed = speed
+        self.__radius = radius
+        self.__color = color
+        self.__on = on
+    def show (self):
+        print('[+] speed:',self.__speed)
+        print('[+] radius:',self.__radius)
+        print('[+] color:',self.__color)
+        print('[+] on:',self.__on)
+F=Fan(speed = 3 ,radius = 5,color = 'yellow',on = False)
+F.show()
+'''
+'''
 #5
 class LinearEquation:
     def __init__(self,a,b,c,d,e,f):
@@ -100,26 +116,54 @@ class LinearEquation:
         self.__d = d
         self.__e = e
         self.__f = f
-    def isSolvable(self):
-        if self.__a * self.__d - self.__b * self.__c != 0:
-            print True
         if self.__a * self.__d - self.__b * self.__c == 0:
-           print ('there is no solution to this equation')
+            print ('there is no solution to this equation')
+            exit (0) # wu bao cuo jie su dang qian dai ma
+    def isSolvable(self):
+        print (' [+] True')
     def getX(self):
         x = (self.__e * self.__d - self.__b * self.__f)/(self.__a * self.__d - self.__b * self.__c)
-        print x
+        print (' [+] x:',x)
     def getY(self):
         y = (self.__a * self.__f - self.__e * self.__c) / (self.__a * self.__d - self.__b * self.__c)
-        print y
-L=LinearEquation(1,2,1,2,5,6)
+        print ('[+] y:',y)
+L=LinearEquation(1,2,3,4,5,6)
 L.isSolvable()
 L.getX()
 L.getY()
-
 '''
+
 #6
 class LinearEquation:
-    def __init__(self):
-        self.x1
-'''
+    def __init__(self,x1,y1,x2,y2,x3,y3,x4,y4):
+        self.__x1 = x1
+        self.__y1 = y1
+        self.__x2 = x2
+        self.__y2 = y2
+        self.__x3 = x3
+        self.__y3 = y3
+        self.__x4 = x4
+        self.__y4 = y4
+    def Result(self):
+        k1 = (y1 - y2) / (x1 - x2)
+        k2 = (x3 - x4) / (y3 - y4)
+        if k1 ==k2:
+            print('[+] mei you jiao dian')
+        else:
+            
+        if self.__a * self.__d - self.__b * self.__c == 0:
+            print ('there is no solution to this equation')
+            exit (0) # wu bao cuo jie su dang qian dai ma
+    def isSolvable(self):
+        print (' [+] True')
+    def getX(self):
+        x = (self.__e * self.__d - self.__b * self.__f)/(self.__a * self.__d - self.__b * self.__c)
+        print (' [+] x:',x)
+    def getY(self):
+        y = (self.__a * self.__f - self.__e * self.__c) / (self.__a * self.__d - self.__b * self.__c)
+        print ('[+] y:',y)
+L=LinearEquation(1,2,3,4,5,6)
+L.isSolvable()
+L.getX()
+L.getY()
 
