@@ -124,11 +124,34 @@ Num(p)
 '''
 '''
 #11
-'''
+import random
+def youhuiquan():
+    list_ = [1,2,3,4,5,6,7,8,9,0,10,11,12,13]
+    list_2 =['hong tao','hei tao','mei hua','fang kuai']
+    rest_list = []
+    count = 0
+    while len(rest_list) != 4:
+        count +=1
+        random_1 = random.randint(0,12)
+        random_2 = random.randint(0,3)
+        if list_2[random_2] not in rest_list:
+            print('huo de pai: {}{}'.format(list_2[random_2],list_[random_1]))
+            rest_list.append(list_2[random_2])
+    print('Pick: '+ str(count))
+youhuiquan()
 '''
 #12
 def isConsecutiveFour(values):
-
+    values_list = list(str(values))
+    if len(values_list) >= 4:
+        for i in range(len(values_list)-3):
+            if values_list[i] == values_list[i + 1] and  values_list[i] == values_list[i + 2] and  values_list[i] == values_list[i + 3]: 
+                print('cheng gong')
+                break
+    else:
+        print('shi bai')
 values = raw_input('shu ru yi chuan shu: ' )
+#v = values.split(',')
 isConsecutiveFour(values)
 '''
+
